@@ -14,8 +14,6 @@ host = os.getenv('RM_HOST')
 port = os.getenv('RM_PORT')
 username = os.getenv('RM_USER')
 password = os.getenv('RM_PASSWORD')
-
-
 db_host = os.getenv('DB_HOST')
 db_port = os.getenv('DB_PORT')
 db_username = os.getenv('DB_USER')
@@ -245,7 +243,7 @@ def get_services_command(update: Update, context):
     else: update.message.reply_text("Ошибка выполнения команды")
 
 def apt_list_command(update: Update, context):
-    update.message.reply_text('Введите название пакета, информацию о котором необходимо найти или apt_list, чтобы вывести информацию обо всех установленных пакетах: ')
+    update.message.reply_text('Enter apt_list or packet name')
     return 'apt_list'
 
 
